@@ -1,45 +1,134 @@
-/*#contenedor{
+            /*#contenedor{
    
 }*/
-#cabecera{
-    height: 100%; 
-    background-color: rgb(10,9,7);
-}
-#logo{
-    background-color: rgb(10,9,7);
-    height: 120px;
-}
-#logo img{
-    height: 100%;
-    margin-left: 25px;
-}
-
-#botonera{
-    
-    margin-top: 60px;
-}
-
-.menuhambur{
-    background-color: rgb(10,9,7) !important;
-    
-  }
-    
-  .menuhambur ul a{
-      color: #ffffff !important;
-  } 
-  .menuhambur ul a:hover{
-      background-color:  rgb(10,9,7);
-      border-radius: 15px;
-      box-shadow: 0px 0px 30px #ffffff;
-  }
-  .navbar-toggler-icon{
-      background-color: #ffffff;
-  }   
-
-#inicio{
-    margin-top: 10px;
-    background-color: rgb(4,4,4); 
-}
-
-
-
+            
+            #cabecera {
+                height: 100%;
+                background-color: rgb(10, 9, 7);
+            }
+            
+            #logo {
+                background-color: rgb(10, 9, 7);
+                height: 120px;
+            }
+            
+            #logo img {
+                height: 100%;
+                margin-left: 25px;
+            }
+            
+            #botonera {
+                margin-top: 60px;
+            }
+            
+            .menuhambur {
+                background-color: rgb(10, 9, 7) !important;
+            }
+            
+            .menuhambur ul a {
+                color: #ffffff !important;
+            }
+            
+            .menuhambur ul a:hover {
+                background-color: rgb(10, 9, 7);
+                border-radius: 15px;
+                box-shadow: 0px 0px 30px #ffffff;
+            }
+            
+            .navbar-toggler-icon {
+                background-color: #ffffff;
+            }
+            
+            #inicio {
+                margin-top: 5px;
+                background-color: rgb(4, 4, 4);
+            }
+            
+            #inicio img {
+                animation-name: ani-inicio;
+                animation-duration: 6s;
+            }
+            
+            @keyframes ani-inicio {
+                0% {
+                    opacity: 0.5;
+                    -webkit-transform: scale(0.2);
+                }
+                100% {
+                    opacity: 1;
+                    -webkit-transform: scale(1);
+                }
+            }
+            
+            #galeria {
+                margin-top: 5px;
+                background-color: rgb(4, 4, 4);
+            }
+            
+            #portada1 {
+                margin-top: 15px;
+            }
+            
+            #portada2 {
+                margin-top: 15px;
+            }
+            
+            #portada1 img,
+            #portada2 img {
+                width: 100%;
+                border: 3px solid #ffffff;
+            }
+            
+            #fotos {
+                background-color: rgb(4, 4, 4);
+            }
+            
+            #foto1,
+            #foto2,
+            #foto3,
+            #foto4,
+            #foto5 {
+                margin-top: 15px;
+                margin-left: 30px;
+                margin-bottom: 10px;
+            }
+            
+            #foto1 img,
+            #foto2 img,
+            #foto3 img,
+            #foto4 img,
+            #foto5 img {
+                width: 100%;
+                border: 3px solid #ffffff;
+            }
+            
+            #contacto {
+                margin-top: 5px;
+                background-color: rgb(4, 4, 4);
+            }
+            
+            #info-contacto p {
+                color: #ffffff;
+                margin: 0px;
+            }
+            
+            #formulario,
+            #copyright {
+                background-color: rgb(4, 4, 4);
+            }
+            
+            h2 {
+                color: #ffffff;
+            }
+            /*////////////////////////////////////////////////////////////////////*/
+            
+            @media all and (min-width:600px) and (max-width:1023px) {
+                /*////////////////////////////////////////////////////////////////////*/
+                #foto1,
+                #foto2,
+                #foto3,
+                #foto4,
+                #foto5 {
+                    margin-left: 20px;
+                }
+            }
