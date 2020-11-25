@@ -14,9 +14,9 @@ function Adivinanza() {
     Respuesta = document.getElementsByName("txtrespuesta")[0].value;
 
 
-    if (Respuesta == "") {
+    if (Respuesta == "" || Respuesta == 0 || Respuesta > 6) {
 
-        alert('Ingrese una respuesta del 1 al 4');
+        alert('Ingrese una respuesta del 1 al 6');
         return
     }
     contador++
@@ -52,5 +52,11 @@ function Adivinanza() {
     } else if (Respuesta == 4) {
         var solucion = document.getElementById('ganaste').innerHTML = "Respuesta erronea !!! realizaste " + contador + " de 4 intentos";
     }
-
+}
+//Solo permite introducir numeros.
+function soloNumeros(e) {
+    var key = window.event ? e.which : e.keyCode;
+    if (key < 48 || key > 57) {
+        e.preventDefault();
+    }
 }
