@@ -18,6 +18,7 @@ function Adivinanza() {
 
         alert('Ingrese una respuesta del 1 al 6');
         return
+
     }
     contador++
 
