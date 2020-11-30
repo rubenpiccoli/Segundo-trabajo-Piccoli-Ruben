@@ -1,6 +1,6 @@
-            /*#contenedor{
-   
-}*/
+            #contenedor {
+                height: auto;
+            }
             
             #cabecera {
                 height: 100%;
@@ -63,6 +63,7 @@
             #galeria {
                 margin-top: 5px;
                 background-color: rgb(4, 4, 4);
+                height: auto;
             }
             
             #portada1 {
@@ -80,6 +81,7 @@
             }
             
             #fotos {
+                height: auto;
                 background-color: rgb(4, 4, 4);
             }
             
@@ -87,19 +89,23 @@
             #foto2,
             #foto3,
             #foto4,
-            #foto5 {
+            #foto5,
+            #foto6 {
                 margin-top: 15px;
-                margin-left: 30px;
                 margin-bottom: 10px;
+                margin-left: 0;
+                margin-right: 0;
             }
             
             #foto1 img,
             #foto2 img,
             #foto3 img,
             #foto4 img,
-            #foto5 img {
+            #foto5 img,
+            #foto6 img {
                 width: 100%;
-                border: 3px solid #ffffff;
+                margin-left: 0;
+                margin-right: 0;
             }
             
             #contacto {
@@ -112,6 +118,12 @@
                 margin: 0px;
             }
             
+            #personaje img {
+                margin-left: 15%;
+                margin-bottom: 10px;
+                height: 50%;
+            }
+            
             #formulario,
             #copyright {
                 background-color: rgb(4, 4, 4);
@@ -120,15 +132,26 @@
             h2 {
                 color: #ffffff;
             }
-            /*////////////////////////////////////////////////////////////////////*/
             
-            @media all and (min-width:600px) and (max-width:1023px) {
-                /*////////////////////////////////////////////////////////////////////*/
-                #foto1,
-                #foto2,
-                #foto3,
-                #foto4,
-                #foto5 {
-                    margin-left: 20px;
+            h5 {
+                margin-left: 10px;
+            }
+            
+            #efecto {
+                animation-name: efecto_boton;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+            
+            @keyframes efecto_boton {
+                0% {
+                    opacity: 0.8;
+                    -webkit-transform: scale(0.7);
+                    background-color: #dd4b26;
+                }
+                100% {
+                    opacity: 1;
+                    -webkit-transform: scale(1);
+                    background-color: #5fc431;
                 }
             }
