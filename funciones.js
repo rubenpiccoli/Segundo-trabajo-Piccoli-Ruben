@@ -2,8 +2,9 @@ function Nombre() {
     //Consulta el nombre y la guarda en una varible Nombre
     var Ing_Nombre = prompt('¿Cual es tu Nombre?');
 
-    if (Ing_Nombre == null || Ing_Nombre == "") {
+    if (Ing_Nombre == null) {
 
+    } else if (Ing_Nombre == "") {
         alert('Ingrese su nombre para Jugar')
 
     } else {
@@ -14,6 +15,7 @@ function Nombre() {
         document.getElementById('Ayuda').innerHTML = "";
         document.getElementById('Ayuda1').innerHTML = "";
         document.getElementById('ganaste').innerHTML = "";
+        document.getElementById('ganaste').style.color = 'black';
         contador = 0;
         document.getElementById('nombre').innerHTML = "Hola " + Ing_Nombre;
     }
@@ -39,15 +41,17 @@ function Adivinanza() {
 
     // verifica si la repuesta es correcta 
     if (Respuesta == 1) {
-        var solucion = document.getElementById('ganaste').innerHTML = "Respuesta erronea!!! realizaste " + contador + " de 4 intentos";
+        document.getElementById('ganaste').innerHTML = "Respuesta erronea!!! realizaste " + contador + " de 4 intentos";
         $('#txtrespuesta').val('');
 
     } else if (Respuesta == 2) {
-        var solucion = document.getElementById('ganaste').innerHTML = "Respuesta erronea !!! realizaste " + contador + " de 4 intentos";
+        document.getElementById('ganaste').innerHTML = "Respuesta erronea !!! realizaste " + contador + " de 4 intentos";
         $('#txtrespuesta').val('');
 
     } else if (Respuesta == 3) {
-        var solucion = document.getElementById('ganaste').innerHTML = "Has ganado un descuento de 10%";
+        document.getElementById('ganaste').innerHTML = "Has ganado un descuento de 10%";
+        var ganador = document.getElementById('ganaste');
+        ganador.style.color = 'red';
         contador = 0
         var boton = document.getElementById('buuton');
         boton.style.display = 'none';
@@ -55,33 +59,34 @@ function Adivinanza() {
 
 
 
+
     } else if (Respuesta == 4) {
-        var solucion = document.getElementById('ganaste').innerHTML = "Respuesta erronea !!! realizaste " + contador + " de 4 intentos";
+        document.getElementById('ganaste').innerHTML = "Respuesta erronea !!! realizaste " + contador + " de 4 intentos";
         $('#txtrespuesta').val('');
 
     } else if (Respuesta == 5) {
-        var solucion = document.getElementById('ganaste').innerHTML = "Respuesta erronea !!! realizaste " + contador + " de 4 intentos";
+        document.getElementById('ganaste').innerHTML = "Respuesta erronea !!! realizaste " + contador + " de 4 intentos";
         $('#txtrespuesta').val('');
     } else if (Respuesta == 6) {
-        var solucion = document.getElementById('ganaste').innerHTML = "Respuesta erronea !!! realizaste " + contador + " de 4 intentos";
+        document.getElementById('ganaste').innerHTML = "Respuesta erronea !!! realizaste " + contador + " de 4 intentos";
         $('#txtrespuesta').val('');
     }
 
     //Ayuda 2 intento
     if (contador == 2) {
 
-        var solucion = document.getElementById('ganaste').innerHTML = "Respuesta erronea!!! realizaste " + contador + " de 4 intentos";
-        var Ayuda = document.getElementById('Ayuda').innerHTML = "1-Una de las sagas que realizo (Rambo)";
+        document.getElementById('ganaste').innerHTML = "Respuesta erronea!!! realizaste " + contador + " de 4 intentos";
+        document.getElementById('Ayuda').innerHTML = "Ayuda 1 - Una de las sagas que realizo (Rambo)";
     }
     //ayuda 3 intento
     if (contador == 3) {
 
-        var solucion = document.getElementById('ganaste').innerHTML = "Respuesta erronea!!! realizaste " + contador + " de 4 intentos";
-        var Ayuda = document.getElementById('Ayuda1').innerHTML = "2-Otra de las sagas que realizo (Roqui)";
+        document.getElementById('ganaste').innerHTML = "Respuesta erronea!!! realizaste " + contador + " de 4 intentos";
+        document.getElementById('Ayuda1').innerHTML = "Ayuda 2 - Otra de las sagas que realizo (Rocky)";
     }
     if (contador == 4) {
 
-        var solucion = document.getElementById('ganaste').innerHTML = "Respuesta erronea!!! realizaste " + contador + " de 4 intentos";
+        document.getElementById('ganaste').innerHTML = "Respuesta erronea!!! realizaste " + contador + " de 4 intentos";
         var boton = document.getElementById('buuton');
         boton.style.display = 'none';
         alert('Has usado tus ' + contador + ' intentos perdiste!!!')
